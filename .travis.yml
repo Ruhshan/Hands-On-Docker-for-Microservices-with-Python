@@ -26,7 +26,7 @@ jobs:
     - stage: tests
       name: "Unit Tests"
       script:
-      - cd ch4
+      - cd Chapter04
       - docker-compose build db
       - docker-compose build test-postgresql
       - docker-compose run test-postgresql
@@ -38,7 +38,7 @@ jobs:
       - docker-compose run static-analysis
     - stage: push
       script:
-      - cd ch4
+      - cd Chapter04
       - docker-compose build server
       - docker tag thoughts_server:latest ruhshan/thoughts-backend:$GIT_SHA
       - docker push ruhshan/thoughts-backend:$GIT_SHA
