@@ -4,10 +4,12 @@ services:
 env:
   global:
     - DOCKER_COMPOSE_VERSION=1.23.2
-    - secure: "JFfTuHv8KbDDfNOvX5h1cdR0gP5/kXD/qej7yc7PR6XaN+AXwBdZSmVHx7rwHy8EJUnJUJNWZB+59AphEloXv7rJZq8mmdR9i8DcuAPED1Ra28tE30NOAq0dXIghVALy2m3MqtcYQWQ73KhH/Om67Ug9uNWhxvAdkMwhHYuCsUP/EcsZPmCU6QORpud4ZJePysE+EzLwfB2LHiQWf0R/rYd+58YZ6ZUrZjH5ET2joU3FgVC4CpvH96+wIr1sSj0Z8wvApTT+jnCJWq2UhgUdY4gdRK6Xdc/Ky8S1HrLBxLSQVErc7tA+jOo2Fr3YgmJzKNbjTZFSCigWPtZU9KP8xQHmpVXmF49+ryC9mKa5tdXn36feGxEHXAYwRo1fNNkkqCK5XaYOoG9LO7Vnnxl1wsQ/lf+0qvQbLx2L4VLhC0WakKP7MfpitWhraLzLAf9K2VWlM9N8NYQPH4rizl8MH1MWXe93oL7lY/K/69Xltk4dTRuXl2LYQTG3j+JxW8jCEBjymVdZU+2V8JuEeWELDluWv/Jf3FN2Xvs3m3m7479N3D+gO9Ywr63jBq+Qqn5EyEKtNUA5QJHcfpf9KgPxcxulf+IIydFQNjL2HvHOrfEU6ZKP7W+6MNfqaXl/nKqMv258sHWSsI4ILAoXxEyvve9nrVPLzkkXqd4HrtdEm3Y="
-    - secure: "msIILUbsoB6uqTsHdxAWaKHxnHtgla9lSH1lV6j4eh572pIuU4UzQ7zQSw8n1ZdAcWmg2B6jm8ejpheYlAhWJGfCUSc0Znt1CXx0ytyMQWaWXxTIvLk769AOeR9I/eRsqAnZvj1JSsK1jac6K2LOodi0wF4UZPgKzI7xqY4ZZ7i2Bgk1zwyjZRd3ZjtjfEpa2kePrBvehiT1Y9JDCjcQTlvRw/hd7sN5BFwa4d+uSmdcjK4SZD/8PxsRZbZug+iuUYNLDQtJD7h/e2LUuOhJIz1gtwYmV1nQheIamFaF9kYcdn4Qtq5l9ejXXnpW8zX8UNwfEY5GmQ9P5n1YVgZY+BeoXgZ3qe9RJjyM/4QsJfkP1E1KrvZseOah9GI2QGCx6aClljQqQZIouRIyvGZ72YK1yu5R6drOmbFoa+bXjwDYrZTT+mlgtJoUnGdk6/H5oT9u4xpPizZSAOIrJHqRsbJekmcOw8Z3IuxL7hyN5DZvVnC6uY3egbrfr308oJXeN51SpVXwzrXjAc2Qro0sYAMksP6VGUuil6gG7pbge1z4ERIX+t4NRm6hW7Lq1nFW9rrxHkzj8en9UJ0+bQmM83n5OkNlyNc9qOuyjNlPv1sfK1dWSj4IXrZ3K6YrLLsnrWN2AMcWvXridga4GeWeneQnUOtw66lIgNF6UPAIqmE="
+    - DOCKER_USERNAME=ruhshan
+    - DOCKER_PASSWORD=5fea9385-8176-435b-8966-5fe61b05f98f
 
 before_install:
+  - echo "DOCKER_COMPOSE_VERSION"
+  - echo "DOCKER_USERNAME"
   - sudo rm /usr/local/bin/docker-compose
   - curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > docker-compose
   - chmod +x docker-compose
