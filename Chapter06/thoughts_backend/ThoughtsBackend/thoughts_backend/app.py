@@ -1,7 +1,6 @@
 from flask import Flask
 from flask_restplus import Api
 
-
 def create_app():
     from thoughts_backend.api_namespace import api_namespace
     from thoughts_backend.admin_namespace import admin_namespace
